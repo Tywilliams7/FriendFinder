@@ -1,16 +1,16 @@
 var express = require("express"),
 
-    peopleArray = require("../FriendFinder/app/data/friends"),
+    peopleArray = require("./data/friends"),
     app = express(),
 
 
-    PORT = process.env.PORT || 8080
+    PORT = process.env.PORT || 3000
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+require("./routing/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
 // hde
 app.post("/api/friends", function (req, res) {
     // req.body hosts is equal to the JSON post sent from the user
