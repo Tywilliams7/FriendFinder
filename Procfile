@@ -1,1 +1,1 @@
-web: node FriendFinder\app\server.js
+web: node server.js
