@@ -4,7 +4,7 @@ var express = require("express"),
     app = express(),
 
 
-    PORT = process.env.PORT || 3000
+    PORT = process.env.PORT || 8080
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -14,13 +14,40 @@ require("./routing/htmlRoutes")(app);
 // hde
 app.post("/api/friends", function (req, res) {
     // req.body hosts is equal to the JSON post sent from the user
-    // This works because of our body parsing middleware
     var newperson = req.body;
-
-    // Using a RegEx Pattern to remove spaces from newCharacter
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    var newScores = newperson.score;
+    var newTotal = 0;
+    
     console.log("New Entry: " + newperson.score);
-    console.log("People: "+peopleArray);
+    // Sum of New User
+    for (let i = 0; i < newScores.length; i++) {
+        newTotal += Number(newScores[i]);
+    }
+    console.log("New Person Total "+newTotal);
+
+    // Sum of Old Users
+    const result = peopleArray.map((value) => {
+        return {
+            name: value.name,
+            photo: value.photo,
+            score: value.scores.reduce((total, score) => total + Number(score), 0)
+        }
+    
+    });
+    console.log(result);
+    console.log(result.length)
+    for (let i = 0; i < result.length; i++) {
+        if (newTotal == result[i].score){
+            console.log("Hi!");
+
+        }
+        console.log("bye")
+    }
+    
+
+    
+
+
     peopleArray.push(newperson);
 
     res.json(newperson);

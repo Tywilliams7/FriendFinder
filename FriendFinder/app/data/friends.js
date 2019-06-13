@@ -7,11 +7,11 @@ var peopleArray = [
         name: "Hector Valdes",
         photo: "",
         scores: [
-            "5", "1",
-            "4", "4",
-            "5", "1",
-            "2", "5",
-            "4", "1"
+            "5", "1", 
+            "4", "4", 
+            "5", "1", 
+            "2", "5", 
+            "4", "1" 
         ]
     }, {
         name: "Tyler Williams",
@@ -26,11 +26,10 @@ var peopleArray = [
     }
 ]
 
-// for (i = 0; i < length; i++){
-// var length = peopleArray.length,
-    
-// }
+var scoreSum = [
+    32
 
+]
 
 
 // for (i = 0; i < length; i++) {
