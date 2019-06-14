@@ -1,6 +1,6 @@
 var express = require("express"),
 
-    peopleArray = require("/app/data/friends"),
+    peopleArray = require("./app/data/friends"),
     app = express(),
 
 
