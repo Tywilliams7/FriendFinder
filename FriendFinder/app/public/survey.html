@@ -65,6 +65,7 @@
     <script type="text/javascript">
         $("#add-btn").on("click", function (event) {
             event.preventDefault();
+            console.log("Worked!")
             var newPerson = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
