@@ -15,7 +15,7 @@ var peopleArray = [
         ]
     }, {
         name: "Tyler Williams",
-        photo: "",
+        photo: "iwfjowjf",
         scores: [
             "5", "1",
             "4", "4",
