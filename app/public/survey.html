@@ -205,12 +205,6 @@
                     .then(function (data) {
                         console.log("survey.html", data);
                         alert("Adding entry...");
-
-                        $("#match-name").text(peopleArray[leastIndex].name);
-                        $("#match-img").attr("src", peopleArray[leastIndex].photo);
-
-                        // Show the modal with the best match
-                        $("#results-modal").modal("toggle");
                     });
             });
         </script>

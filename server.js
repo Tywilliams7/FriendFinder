@@ -66,11 +66,11 @@ app.post("/api/friends", function (req, res) {
     // document.getElementById("results-modal").modal = "toggle";
     
 
-    // $("#match-name").text(peopleArray[leastIndex].name);
-    // $("#match-img").attr("src", peopleArray[leastIndex].photo);
+    $("#match-name").text(peopleArray[leastIndex].name);
+    $("#match-img").attr("src", peopleArray[leastIndex].photo);
 
-    // // Show the modal with the best match
-    // $("#results-modal").modal("toggle");
+    // Show the modal with the best match
+    $("#results-modal").modal("toggle");
 
 
     peopleArray.push(newperson);
