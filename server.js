@@ -37,6 +37,7 @@ app.post("/api/friends", function (req, res) {
 
         return {
             name: value.name,
+            photo: value.photo,
             score: value.scores.reduce((userTotal, score) => userTotal + Number(score), 0),
 
         }
@@ -61,21 +62,9 @@ app.post("/api/friends", function (req, res) {
     console.log("Your best match is.... ");
     console.log(result[leastIndex]);
 
-    // document.getElementById("match-name").innerText = peopleArray[leastIndex].name;
-    // document.getElementById("match-img").setAttribute = "src", peopleArray[leastIndex].photo;
-    // document.getElementById("results-modal").modal = "toggle";
-    
-
-    $("#match-name").text(peopleArray[leastIndex].name);
-    $("#match-img").attr("src", peopleArray[leastIndex].photo);
-
-    // Show the modal with the best match
-    $("#results-modal").modal("toggle");
-
-
     peopleArray.push(newperson);
 
-    res.json(newperson);
+    res.json(result[leastIndex]);
 
 });
 
