@@ -9,9 +9,7 @@ Use express, body-parser, and path npm packages in the server.js file
 
 Separate JavaScript files for routing (htmlRoutes.js and apiRoutes.js)
 
-Appropriate GET and POST routes for serving HTML pages and API callshttps://murmuring-island-94264.herokuapp.com/
-Separate file for storing friends (friends.js)
-Calculate best match for user once survey is completed and return that match to the user
+Deployed to [Heroku](https://pure-headland-56134.herokuapp.com/)
 
 ## Technologies Used
 JavaScript
